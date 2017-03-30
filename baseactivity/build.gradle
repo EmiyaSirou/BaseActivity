@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+}
+
+// 在上传库时，Bintray 插件会寻找 POM 文件。
+// 即使 Maven 插件为你生成了它，你也应该自己指定 groupId 标签和 version 标签的值。
+// 要这样做，请使用 gradle 文件中的group 和version 的变量。
+
+group = 'com.base.activity' // Change this to match your package name
+version = '0.0.1'
+
+// 为了遵守 Maven 标准，你的库也应该有一个包含了库的源文件的 JAR 文件。
+// 为了生成 JAR 文件，需要创建一个新的 Jar任务，generateSourcesJar，并且使用 from 功能指定的源文件的位置。
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+// 我们同样推荐，在你的库里有一个包含 Javadocs 的 JAR 文件。
+// 因为目前你还没有任何 Javadocs，需要创建一个新的 Javadoc 任务，generateJavadocs，来生成它们。
+// 使用 source 变量来指定源文件的位置。 你还应该更新 classpath 变量，以便该任务可以找到属于 Android SDK 的类。
+// 你可以通过把 android.getBootClasspath 方法的返回值添加给他，来这么做。
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+// 下一步，要从 Javadocs 生成 JAR，需要创建 Jar 任务，generateJavadocsJar，
+// 并把 generateJavadocs 的 destinationDir 属性传递给它的 from 功能。
+task generateJavadocsJar(type: Jar, dependsOn: generateJavadocs) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+// 为了把源和 Javadoc JAR 文件导入到 artifacts 的列表里，你应该把他们的任务的名字添加到 configuration 里，
+// 称为 archives，artifacts 列表将被上传到 Maven 仓库。
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}

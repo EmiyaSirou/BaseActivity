@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">baseactivity</string>
+    <string name="network_connect_fail">网络异常</string>
+    <string name="titlebar_back">返回</string>
+    <string name="titlebar_save">保存</string>
+    <string name="titlebar_add">添加</string>
+</resources>

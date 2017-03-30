@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <!-- 字体颜色_黑 -->
+    <color name="font_black">#222222</color>
+    <!-- 字体颜色_灰 -->
+    <color name="font_gray">#dcdcdc</color>
+    <!-- 背景颜色_浅白 -->
+    <color name="background_light_white">#f9f9f9</color>
+    <color name="skin_color">#227ac7</color>
+</resources>

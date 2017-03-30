@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/skin_color"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <FrameLayout
+        android:id="@+id/fl_titlebar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_titlebar_back"
+            style="@style/font_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:text="@string/titlebar_back"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_titlebar_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:scaleType="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_titlebar_rightbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_titlebar_rightbutton"
+            style="@style/font_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_titlebar_rightbutton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!--<View-->
+        <!--android:id="@+id/view_underline"-->
+        <!--style="@style/view_line_horizontal"-->
+        <!--android:layout_alignParentBottom="true" />-->
+
+</RelativeLayout>

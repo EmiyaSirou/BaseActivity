@@ -1,0 +1,96 @@
+<resources>
+    <style name="font_10sp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_12sp">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_14sp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_15sp">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_16sp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_18sp">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_20sp">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_22sp">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_30sp">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_32sp">
+        <item name="android:textSize">32sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="font_15sp_editText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/font_gray</item>
+    </style>
+
+    <style name="font_16sp_editText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/font_gray</item>
+    </style>
+
+    <style name="font_18sp_editText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/font_black</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/font_gray</item>
+    </style>
+
+</resources>
